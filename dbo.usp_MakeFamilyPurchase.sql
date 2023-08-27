@@ -8,5 +8,5 @@ SELECT @s = SUM(b.Value)
 UPDATE dbo.Family
 SET BudgetValue = BudgetValue - @s
 IF @FamilySurName NOT IN (SELECT SurName FROM dbo.Family)
-    PRINT N'Такой семьи нет'; 
+    PRINT N'No such family'; 
 END;
